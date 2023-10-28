@@ -1,32 +1,61 @@
 package fr.gns.app;
 
-public class AppComparerJoueurs {
+public class Joueur {
+	private int numero ;
+	private String nom ;
+	private String pays ;
+	private int nbVictoires = 0 ;
+	
+	public Joueur(int numero, String nom, String pays, int nbVictoires) {
+		super();
+		this.numero = numero;
+		this.nom = nom;
+		this.pays = pays;
+		this.nbVictoires = nbVictoires;
+	}
 
-	public static void main(String[] args) {
+	public Joueur(int numero, String nom, String pays) {
+		super();
+		this.numero = numero;
+		this.nom = nom;
+		this.pays = pays;
+	}
 
-		Joueur jr1 = new Joueur( 28 , "Parker" , "France" , 30 ) ;
-		Joueur jr2 = new Joueur( 28 , "Parker" , "France" , 30 ) ;
-		System.out.println( "Premier joueur : " + jr1 ) ;
-		System.out.println( "Second joueur  : " + jr2 ) ;
-		
-		
-		System.out.println( "\nComparaison des deux joueurs : Opérateur ==\n" ) ;
-		if( jr1 == jr2 ) {
-			System.out.println( "\tLes deux joueurs sont identiques.\n" ) ;
-		}
-		else {
-			System.out.println( "\tLes deux joueurs sont différents.\n" ) ;
-		}
-		
-		System.out.println( "\nComparaison des deux joueurs : Méthode equals(Object)\n" ) ;
-		if( jr1.equals( jr2 ) ){
-			System.out.println( "\tLes deux joueurs sont identiques.\n" ) ;
-		}
-		else {
-			System.out.println( "\tLes deux joueurs sont différents.\n" ) ;
-		}
+	public int getNumero() {
+		return numero;
+	}
 
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPays() {
+		return pays;
+	}
+
+	public void setPays(String pays) {
+		this.pays = pays;
+	}
+
+	public int getNbVictoires() {
+		return nbVictoires;
+	}
+
+	public void setNbVictoires(int nbVictoires) {
+		this.nbVictoires = nbVictoires;
+	}
+
+	@Override
+	public String toString() {
+		return "Joueur [numero=" + numero + ", nom=" + nom + ", pays=" + pays + ", nbVictoires=" + nbVictoires + "]";
 	}
 
 }
-
